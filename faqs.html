@@ -167,6 +167,24 @@
         </div>
     </footer>
     <script src="script.js"></script>
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            
+            // Toggle the 'active' class for the icon rotation and styling
+            faqItem.classList.toggle('active');
+
+            // Force the height display
+            if (faqItem.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = "0";
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
