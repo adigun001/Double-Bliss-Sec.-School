@@ -1,0 +1,382 @@
+/* --- MOBILE RESPONSIVENESS (Below 992px) --- */
+@media (max-width: 992px) {
+
+    /* 1. Header Adjustments */
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px 5%;
+    }
+
+    /* Hide the school name on mobile as requested */
+    .school-name {
+        display: none;
+    }
+
+    /* 2. Reordering: Menu Bar before Logo */
+    /* Assuming your brand div has the logo and menu button */
+    .brand {
+        display: flex;
+        align-items: center;
+        order: 2;
+        /* Moves Logo to the second position */
+    }
+
+    /* The Hamburger Menu Icon */
+    .menu-toggle {
+        display: block;
+        /* Show the menu bar */
+        order: 1;
+        /* Moves Menu Bar to the first position */
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--navy-blue);
+        margin-right: 15px;
+    }
+
+    /* 3. Navigation Links (Hidden by default) */
+    .nav-links {
+        display: none;
+        /* Hide by default */
+        position: absolute;
+        top: 75%;
+        left: 0;
+        width: 50%;
+        background-color: #002147;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Display nav-links when active */
+    .nav-links.active {
+        display: flex;
+        /* Show when JS toggles 'active' */
+    }
+
+    .nav-links li {
+        margin: 2px 0;
+    }
+
+    .nav-links li a {
+        color: var(--cream) !important;
+        font-size: 1.3rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        /* Make dropdown content flow with the rest of the menu */
+        background-color: transparent;
+        /* Remove background for mobile */
+    }
+
+    /* 4. About Section Responsive */
+    .about-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    /* 5. Mission & Vision Responsive */
+    .mv-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 6. Gallery Slider Responsive */
+    .slide-item img {
+        height: 300px;
+        /* Shorter height for mobile screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-header h2 {
+        font-size: 2rem;
+    }
+
+    .slider-container {
+        max-width: 95%;
+        /* Use more width on small screens */
+    }
+
+    .slide-item img {
+        height: 300px;
+        /* Smaller image height for mobile */
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards in a single column */
+        padding: 0 10px;
+    }
+
+    .news-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    /* Stack the card elements vertically */
+    .cta-flex-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+        /* Reduce padding for smaller screens */
+        gap: 30px;
+    }
+
+    /* Adjust the Heading size for mobile */
+    .cta-text h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .cta-text p {
+        margin: 0 auto;
+        /* Centers the paragraph */
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Make the Action area full width */
+    .cta-action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Make the button big and easy to press */
+    .btn-apply-now {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btn-label {
+        font-size: 1.2rem;
+    }
+}
+
+/* For Tablets and Mobile (992px and below) */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns instead of 4 */
+        gap: 20px;
+    }
+}
+
+/* For Small Mobile Devices (600px and below) */
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 30px 20px;
+        /* Add some side padding for small screens */
+        text-align: center;
+        /* Center text for a cleaner look on mobile */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        /* Stack Logo and Socials vertically */
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+        /* Stack logo image and text */
+        gap: 10px;
+    }
+
+    .footer-socials {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        /* 1 column layout */
+        gap: 25px;
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 0;
+        /* Disable the sliding hover effect on mobile */
+    }
+
+    .subscribe-form {
+        margin: 15px auto 0 auto;
+        /* Center the newsletter form */
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+/* --- ABOUT PAGE --- */
+
+@media (max-width: 992px) {
+
+    .story-grid,
+    .mvv-grid,
+    .message-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-image img {
+        box-shadow: none;
+        /* Simplify for mobile */
+    }
+
+    .message-text {
+        padding: 40px 20px;
+    }
+}
+
+
+
+
+/* --- GALLERY PAGE --- */
+@media (max-width: 992px) {
+    .gallery-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Remove specialized sizing for smaller screens */
+    .gallery-box.wide {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-filters {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* --- NEWS ARCHIVE SPECIFIC --- */
+
+@media (max-width: 600px) {
+    .pagination {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .page-link {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .page-numbers {
+        grid-area: 1 / 1 / 2 / 3;
+        /* Span across both columns */
+        justify-self: center;
+        /* Center the page numbers */
+    }
+}
+
+
+
+/* --- SINGLE NEWS PAGE --- */
+@media (max-width: 992px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+        /* Stacked */
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-main {
+        order: 1;
+    }
+
+    .article-sidebar {
+        order: 2;
+        margin-top: 50px;
+        border-top: 1px solid #eee;
+        padding-top: 40px;
+    }
+}
+
+
+
+/* --- CONTACT PAGE --- */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 90%;
+        padding: 15px 12px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--navy);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .notice-card {
+        padding: 40px 20px;
+        margin: 0 15px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
