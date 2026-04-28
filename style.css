@@ -1790,3 +1790,69 @@ blockquote {
     50% { transform: scale(1.1); opacity: 0.8; }
     100% { transform: scale(1); opacity: 1; }
 }
+
+
+
+/* --- FLOATING WHATSAPP FAB --- */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Official WhatsApp Green for recognition */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 50px; /* Circular initially */
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    max-width: 55px; /* Size of the circle */
+    white-space: nowrap;
+}
+
+.whatsapp-fab i {
+    font-size: 24px;
+    min-width: 25px;
+    text-align: center;
+}
+
+.fab-text {
+    font-size: 0; /* Hidden by default */
+    opacity: 0;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-right: 0;
+}
+
+/* Hover State: Expands and shows text */
+.whatsapp-fab:hover {
+    max-width: 300px; /* Expands to fit text */
+    padding: 15px 25px;
+}
+
+.whatsapp-fab:hover .fab-text {
+    font-size: 1rem;
+    opacity: 1;
+    margin-right: 12px;
+}
+
+/* Optional: Pulse effect to grab attention */
+.whatsapp-fab::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: inherit;
+    z-index: -1;
+    animation: pulseWhatsApp 2s infinite;
+}
+
+@keyframes pulseWhatsApp {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
