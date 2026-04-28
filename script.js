@@ -1,10 +1,10 @@
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     
-    // Add a slight delay (e.g., 500ms) so the user actually sees the beautiful logo
+    // Add a slight delay (e.g., 1000ms) so the user actually sees the beautiful logo
     setTimeout(() => {
         preloader.classList.add('loader-fade-out');
-    }, 500);
+    }, 1000);
 });
 
 const menuToggle = document.getElementById('mobile-menu');
