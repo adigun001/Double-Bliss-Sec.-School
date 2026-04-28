@@ -1,3 +1,12 @@
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Add a slight delay (e.g., 500ms) so the user actually sees the beautiful logo
+    setTimeout(() => {
+        preloader.classList.add('loader-fade-out');
+    }, 500);
+});
+
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 
