@@ -380,3 +380,22 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 768px) {
+    .whatsapp-fab {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+    }
+    
+    /* On mobile, we can keep it as just the icon to save space */
+    .whatsapp-fab:hover {
+        max-width: 50px; 
+        padding: 12px;
+    }
+    
+    .whatsapp-fab:hover .fab-text {
+        display: none;
+    }
+}
